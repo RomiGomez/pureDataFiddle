@@ -1,0 +1,80 @@
+#N canvas 0 0 1280 718 10;
+#X text 738 180 PARCIALES;
+#X obj 586 196 bng 18 250 50 0 empty empty empty 17 7 0 10 -258113
+-1 -1;
+#X obj 388 187 tgl 32 0 empty empty On/Off 1 18 0 9 -262144 -258113
+-258113 0 1;
+#X obj 586 110 r attack-bang;
+#X obj 634 -234 r freq-parcial-1;
+#X obj 644 -211 r amplitud-parcial-1;
+#X obj 701 -155 r freq-parcial-2;
+#X obj 711 -130 r amplitud-parcial-2;
+#X obj 771 -79 r freq-parcial-3;
+#X obj 781 -55 r amplitud-parcial-3;
+#X obj 838 -5 r freq-parcial-4;
+#X obj 634 221 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -257985 -1 -1 0 256 0;
+#X obj 644 241 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -4032 -1 -1 0 256 0;
+#X obj 701 221 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -257985 -1 -1 0 256 0;
+#X obj 711 241 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -4032 -1 -1 0 256 0;
+#X obj 771 221 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -257985 -1 -1 0 256 0;
+#X obj 781 241 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -4032 -1 -1 0 256 0;
+#X obj 848 21 r amplitud-parcial-4;
+#X obj 838 221 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -257985 -1 -1 0 256 0;
+#X obj 848 241 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -4032 -1 -1 0 256 0;
+#X obj 656 -189 r midi-parcial-1;
+#X obj 723 -109 r midi-parcial-2;
+#X obj 793 -33 r midi-parcial-3;
+#X obj 860 46 r midi-parcial-4;
+#X text 433 220 Freq Hz;
+#X text 432 243 Amplitud;
+#X obj 502 -33 r fund-frec;
+#X obj 499 220 nbx 5 16 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -257985 -1 -1 0 256 0;
+#X obj 525 21 r fund-midi;
+#X obj 514 -13 r total-rms;
+#X obj 511 241 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -4032 -1 -1 0 256 0;
+#X obj 250 219 s on-off-fiddle;
+#X obj 522 265 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -260097 -1 -1 0 256 0;
+#X obj 656 265 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -260097 -1 -1 0 256 0;
+#X obj 723 265 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -260097 -1 -1 0 256 0;
+#X obj 793 265 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -260097 -1 -1 0 256 0;
+#X obj 860 265 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -260097 -1 -1 0 256 0;
+#X text 433 264 Midi Nota;
+#X text 647 198 1;
+#X text 704 198 2;
+#X text 773 199 3;
+#X text 840 199 4;
+#X text 505 179 GENERAL;
+#X text 575 178 ATAQUE;
+#X connect 2 0 31 0;
+#X connect 3 0 1 0;
+#X connect 4 0 11 0;
+#X connect 5 0 12 0;
+#X connect 6 0 13 0;
+#X connect 7 0 14 0;
+#X connect 8 0 15 0;
+#X connect 9 0 16 0;
+#X connect 10 0 18 0;
+#X connect 17 0 19 0;
+#X connect 20 0 33 0;
+#X connect 21 0 34 0;
+#X connect 22 0 35 0;
+#X connect 23 0 36 0;
+#X connect 26 0 27 0;
+#X connect 28 0 32 0;
+#X connect 29 0 30 0;
+#X coords 0 -1 1 1 550 125 2 370 168;

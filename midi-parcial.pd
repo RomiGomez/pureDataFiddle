@@ -1,0 +1,11 @@
+#N canvas 421 254 450 300 10;
+#X obj 63 -777 ftom;
+#X obj 63 -730 nbx 3 12 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -260097 -1 -1 87 256;
+#X obj 64 -799 r freq-parcial-\$1;
+#X obj 63 -711 s midi-parcial-\$1;
+#X obj 63 -752 redondeo;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;

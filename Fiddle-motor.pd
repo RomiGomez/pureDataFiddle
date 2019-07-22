@@ -1,0 +1,161 @@
+#N canvas -1718 61 1280 718 10;
+#X floatatom 106 -322 0 0 0 0 - - -;
+#X obj 48 -321 bng 15 250 50 0 ataque empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 208 -328 route 1 2 3 4;
+#X obj -144 -220 mtof;
+#X obj 110 -243 s total-db;
+#X obj -38 -306 s attack-bang;
+#X text 896 -286 PARCIALES;
+#X obj 387 -320 bng 18 250 50 0 empty empty empty 17 7 0 10 -258113
+-1 -1;
+#X obj -144 -256 nbx 3 16 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -260097 -1 -1 45 256 0;
+#X obj -144 -129 nbx 5 16 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -257985 -1 -1 110 256 0;
+#X text 347 -320 Ataque;
+#X obj -144 -307 change;
+#X obj 935 -553 tgl 32 0 empty empty On/Off 1 18 0 9 -262144 -258113
+-258113 0 1;
+#X obj -144 -172 change;
+#X obj 106 -222 dbtorms;
+#X obj 106 -199 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -4032 -1 -1 0.141254 256 0;
+#X obj 106 -258 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -262144 -1 -1 83 256 0;
+#X obj 884 -419 s reset;
+#X obj -98 -273 r reset;
+#X obj 152 -275 r reset;
+#X obj -137 -150 r reset;
+#X obj -42 -240 s fund-midi;
+#X obj -144 -100 s fund-frec;
+#X text -17 -290 ATTACK;
+#X text -80 -127 FUNDAMENTAL HZ;
+#X text 847 -464 RESET;
+#X text 389 -576 PARTIALS MIDI;
+#X text 207 -348 PARTIALS HZ;
+#X text -102 -256 FUNDAMENTAL MIDI;
+#X obj 779 -479 switch~;
+#X obj 387 -355 r attack-bang;
+#X obj 884 -483 sel 0;
+#X obj 884 -461 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 587 -418 r freq-parcial-1;
+#X obj 597 -395 r amplitud-parcial-1;
+#X obj 654 -369 r freq-parcial-2;
+#X obj 664 -344 r amplitud-parcial-2;
+#X obj 724 -313 r freq-parcial-3;
+#X obj 734 -289 r amplitud-parcial-3;
+#X obj 791 -259 r freq-parcial-4;
+#X obj 587 -170 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -257985 -1 -1 110 256 0;
+#X obj 597 -150 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -4032 -1 -1 0.0617696 256 0;
+#X obj 654 -170 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -257985 -1 -1 220 256 0;
+#X obj 664 -150 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -4032 -1 -1 0.0317657 256 0;
+#X obj 724 -170 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -257985 -1 -1 330 256 0;
+#X obj 734 -150 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -4032 -1 -1 0.0208692 256 0;
+#X obj 801 -233 r amplitud-parcial-4;
+#X obj 791 -170 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -257985 -1 -1 440 256 0;
+#X obj 801 -150 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -4032 -1 -1 0.0161044 256 0;
+#X msg 884 -441 0;
+#X obj 265 -521 r midi-parcial-1;
+#X obj 370 -521 r midi-parcial-2;
+#X obj 475 -521 r midi-parcial-3;
+#X obj 580 -521 r midi-parcial-4;
+#X obj 370 -497 nbx 3 12 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -260097 -1 -1 57 256 0;
+#X obj 265 -496 nbx 3 12 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -260097 -1 -1 45 256 0;
+#X obj 580 -500 nbx 3 12 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -260097 -1 -1 69 256 0;
+#X obj 475 -498 nbx 3 12 -1e+037 1e+037 0 0 empty empty empty 0 -8
+0 10 -260097 -1 -1 64 256 0;
+#X obj 585 -544 midi-parcial 4;
+#X obj 19 -368 *~ 0.2;
+#X obj -144 -328 redondeo;
+#X obj 264 -299 parcial 4;
+#X obj 106 -177 s total-rms;
+#X obj 106 -296 redondeo;
+#X obj 208 -164 parcial 1;
+#X obj 245 -255 parcial 3;
+#X obj 226 -209 parcial 2;
+#X text 531 -169 Freq Hz;
+#X text 528 -149 Amplitud;
+#X text -38 -96 General;
+#X obj -43 -50 r fund-frec;
+#X obj -43 28 nbx 5 16 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -257985 -1 -1 110 256 0;
+#X obj -57 72 r fund-midi;
+#X obj -32 -30 r total-rms;
+#X obj -32 49 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -4032 -1 -1 0.141254 256 0;
+#X obj 811 -532 r on-off-fiddle;
+#X obj 935 -511 s on-off-fiddle;
+#X obj 20 -392 r~ input_fiddle_reproductor;
+#X text -101 27 Freq Hz;
+#X text -104 47 Amplitud;
+#X obj -57 95 nbx 3 12 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -260097 -1 -1 45 256 0;
+#X obj 17 -454 r~ input_fiddle_phasor;
+#X obj 269 -547 midi-parcial 1;
+#X obj 373 -545 midi-parcial 2;
+#X obj 480 -544 midi-parcial 3;
+#X obj 19 -345 fiddle~ 4096 1 100 4;
+#X connect 0 0 63 0;
+#X connect 1 0 5 0;
+#X connect 2 0 64 0;
+#X connect 2 1 66 0;
+#X connect 2 2 65 0;
+#X connect 2 3 61 0;
+#X connect 3 0 13 0;
+#X connect 8 0 21 0;
+#X connect 8 0 3 0;
+#X connect 9 0 22 0;
+#X connect 11 0 8 0;
+#X connect 12 0 76 0;
+#X connect 13 0 9 0;
+#X connect 14 0 15 0;
+#X connect 15 0 62 0;
+#X connect 16 0 4 0;
+#X connect 16 0 14 0;
+#X connect 18 0 8 0;
+#X connect 19 0 16 0;
+#X connect 20 0 9 0;
+#X connect 30 0 7 0;
+#X connect 31 0 32 0;
+#X connect 32 0 49 0;
+#X connect 33 0 40 0;
+#X connect 34 0 41 0;
+#X connect 35 0 42 0;
+#X connect 36 0 43 0;
+#X connect 37 0 44 0;
+#X connect 38 0 45 0;
+#X connect 39 0 47 0;
+#X connect 46 0 48 0;
+#X connect 49 0 17 0;
+#X connect 50 0 55 0;
+#X connect 51 0 54 0;
+#X connect 52 0 57 0;
+#X connect 53 0 56 0;
+#X connect 59 0 85 0;
+#X connect 60 0 11 0;
+#X connect 63 0 16 0;
+#X connect 70 0 71 0;
+#X connect 72 0 80 0;
+#X connect 73 0 74 0;
+#X connect 75 0 29 0;
+#X connect 75 0 31 0;
+#X connect 77 0 59 0;
+#X connect 81 0 59 0;
+#X connect 85 0 60 0;
+#X connect 85 1 1 0;
+#X connect 85 3 0 0;
+#X connect 85 4 2 0;
+#X coords 0 718 1 717 700 120 0;

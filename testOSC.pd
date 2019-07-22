@@ -1,0 +1,11 @@
+#N canvas -1205 504 450 300 10;
+#X obj 37 33 import mrpeach;
+#X msg 38 95 connect localhost 9001;
+#X floatatom 133 133 5 0 127 0 - - -, f 5;
+#X obj 132 225 packOSC;
+#X obj 132 265 udpsend;
+#X msg 132 179 send test/midinote \$1;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;

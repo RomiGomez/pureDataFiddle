@@ -1,0 +1,23 @@
+#N canvas 332 284 565 388 10;
+#X floatatom 353 265 5 0 0 0 - - -;
+#X floatatom 219 262 5 0 0 0 - - -;
+#X floatatom 152 261 5 0 0 0 - - -;
+#X obj 152 200 expr $f1 \; $i2 \; if (($f1 - $i2) >= 0.5 \, $i2+1 \,
+0) \; if (($f1 - $i2) < 0.5 \, $i2+0 \, 0) \;;
+#X floatatom 286 263 5 0 0 0 - - -;
+#X obj 326 319 +;
+#X obj 353 287 t f;
+#X floatatom 326 345 5 0 0 0 - - -;
+#X obj 152 160 inlet;
+#X obj 425 336 outlet;
+#X connect 0 0 6 0;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;
+#X connect 3 2 4 0;
+#X connect 3 3 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 5 0 9 0;
+#X connect 6 0 5 1;
+#X connect 8 0 3 1;
+#X connect 8 0 3 0;
